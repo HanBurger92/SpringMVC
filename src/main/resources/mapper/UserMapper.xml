@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.springmvc.dao.UserDao">
+
+    <resultMap id="UserMap" type="User">
+        <result property="id" column="id"/>
+        <result property="userName" column="user_name"/>
+        <result property="password" column="user_password"/>
+        <result property="role" column="role"/>
+    </resultMap>
+
+    <select id="login" parameterType="com.springmvc.entity.User" resultMap="UserMap">
+        SELECT * FROM aoxing_user WHERE user_name = #{userName} AND user_password = #{password}
+    </select>
+</mapper>
