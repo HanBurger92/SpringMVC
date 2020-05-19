@@ -2,7 +2,6 @@ package com.springmvc.controller;
 
 import com.springmvc.entity.User;
 import com.springmvc.service.UserService;
-import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -27,7 +26,14 @@ public class HomeController {
         return "home";
     }
 
-    // return ModelAndView in order to redirect to specific controller without params
+    /**
+     * Check userName and password input by the user at login page
+     * save the information to the session (by annotation @SessionAttribute and ModelMap)
+     * @param userName
+     * @param password
+     * @param model
+     * @return
+     */
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public String login(@RequestParam String userName, @RequestParam String password, ModelMap model){
         user = new User();

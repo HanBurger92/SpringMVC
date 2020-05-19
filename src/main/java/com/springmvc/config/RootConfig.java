@@ -28,7 +28,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 public class RootConfig implements TransactionManagementConfigurer {
 
     /**
-     * Database Configuration ---- to connect to the Database
+     * Database java-based Configuration ---- to connect to the Database
      * @return BasicDataSource
      */
     @Bean

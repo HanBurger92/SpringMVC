@@ -8,22 +8,30 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page isELIgnored="false" %>
 <html>
 <head>
     <title>Aoxing Management System</title>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/login.css">
 </head>
-<body>
+
+<body id="gradient">
+
+<div id="headerBlock">
 <h1>Aoxing Management System</h1>
+</div>
 
-<p style="color: red"> Login Failed, Check your username and password </p>
+<p id="warning"> Login Failed, Check your username and password </p>
 
+<div id="loginBlock">
 <form:form method="post" action="login">
     Username <input name="userName">
     <br/>
-    Password <input type="password" name="password">
+    Password &nbsp; <input type="password" name="password">
+    <br/>
     <input type="submit" value="login"/>
 </form:form>
+</div>
 
-</body>
 </body>
 </html>

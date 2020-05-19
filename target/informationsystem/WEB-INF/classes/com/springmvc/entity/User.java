@@ -1,10 +1,8 @@
 package com.springmvc.entity;
 
-import javax.validation.constraints.NotNull;
-
 public class User {
 
-    private Integer id; // Private key
+    private Integer id; // primary key
     private String userName;
     private String password;
     private String role;
