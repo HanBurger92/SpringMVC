@@ -1,0 +1,43 @@
+#headerBlock{
+    width: 100%;
+    height: 100px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #778899;
+}
+
+#ListBlock{
+
+}
+
+#consumer{
+
+}
+
+#supplier{
+
+}
+
+#product{
+
+}
+
+/* class */
+.selection{
+    position: absolute;
+    top: 40px;
+    left: 30px;
+}
+
+.query{
+    position: absolute;
+    top: 35px;
+    left: 200px;
+}
+
+.button{
+
+}

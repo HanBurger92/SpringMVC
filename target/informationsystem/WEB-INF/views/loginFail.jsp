@@ -21,13 +21,13 @@
 <h1>Aoxing Management System</h1>
 </div>
 
-<p id="warning"> Login Failed, Check your username and password </p>
+<p id="warning"> Login Failed, Check your username and password</p>
 
 <div id="loginBlock">
 <form:form method="post" action="login">
     Username <input name="userName">
     <br/>
-    Password &nbsp; <input type="password" name="password">
+    Password &nbsp;<input type="password" name="password">
     <br/>
     <input type="submit" value="login"/>
 </form:form>

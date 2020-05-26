@@ -17,7 +17,7 @@
 <body id="gradient">
 
 <div id="headerBlock">
-    Hello! &nbsp; ${sessionScope.username}
+    Hello!&nbsp; ${sessionScope.username}
     <a href="${pageContext.request.contextPath}/mainPage/userSetting"> setting </a>
 </div>
 

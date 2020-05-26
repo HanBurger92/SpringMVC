@@ -32,4 +32,7 @@ public class MainController {
     public String comprehensiveStatement(){
         return "comprehensiveStatement";
     }
+
+    @RequestMapping(value = "/userSetting" , method = RequestMethod.GET)
+    public String userSetting(){return "userSetting";}
 }
