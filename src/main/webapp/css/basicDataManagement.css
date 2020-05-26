@@ -1,12 +1,12 @@
 #headerBlock{
-    width: 100%;
+    width: 1915px;
     height: 100px;
     margin: 0;
     padding: 0;
     position: absolute;
     top: 0;
     left: 0;
-    background: #778899;
+    background: #87CEFA;
 }
 
 #ListBlock{
@@ -36,8 +36,31 @@
     position: absolute;
     top: 35px;
     left: 200px;
+    width: 1000px;
 }
 
-.button{
+.insertButton{
+    position: absolute;
+    right: 100px;
+    top: 30px;
+    height: 40px;
+    width: 100px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    text-align: center;
+}
 
+.insertButton:hover{
+    background: #008CFA;
+    color: #FFFFFF;
+}
+
+.formButton{
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+.formButton:hover{
+    background: #009cFA;
+    color: #FFFFFF;
 }

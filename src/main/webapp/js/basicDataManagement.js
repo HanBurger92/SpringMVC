@@ -12,3 +12,7 @@ function displayQueryOption(option) {
         }
     }
 }
+
+function insertQuery() {
+    
+}
