@@ -1,8 +1,10 @@
+var queriesToDisplay = ['Consumer','Supplier','Product'];
+var selectedType;
+
 // display different query option for each selection
 function displayQueryOption(option) {
 
-    var queriesToDisplay = ['Consumer','Supplier','Product'];
-    var selectedType;
+
     for(var i=0; i<queriesToDisplay.length; i++){
         selectedType = document.getElementById(queriesToDisplay[i]);
         if (option.value != queriesToDisplay[i]){
@@ -14,5 +16,6 @@ function displayQueryOption(option) {
 }
 
 function insertQuery() {
-    
+    selectedType = prompt("which data you want to insert")
+    var code = prompt()
 }

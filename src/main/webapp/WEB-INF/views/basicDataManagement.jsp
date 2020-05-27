@@ -74,7 +74,7 @@
         </table>
     </div>
 
-    <div id="SupllierList">
+    <div id="SupplierList">
 
     </div>
 
