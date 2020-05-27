@@ -48,6 +48,7 @@
     transition-duration: 0.4s;
     cursor: pointer;
     text-align: center;
+    font-size: small;
 }
 
 .insertButton:hover{

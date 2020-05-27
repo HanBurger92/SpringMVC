@@ -99,6 +99,13 @@
     </dependency>
     <!-- End: jsp dependencies -->
 
+    <!-- web dependencies -->
+    <dependency>
+      <groupId>org.webjars</groupId>
+      <artifactId>jquery-ui</artifactId>
+      <version>1.12.1</version>
+    </dependency>
+
   </dependencies>
 
   <build>

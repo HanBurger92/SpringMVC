@@ -4,7 +4,10 @@
 <html>
 <head>
     <title>basic data management</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/basicDataManagement.css">
+    <script src="${pageContext.request.contextPath}/webjars/jquery/1.12.0/jquery.min.js"></script>
+    <script src="${pageContext.request.contextPath}/webjars/jquery-ui/1.12.1/jquery-ui.min.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/basicDataManagement.js"></script>
 </head>
 <body>
@@ -59,7 +62,23 @@
     </div>
 
     <div id="insert">
-        <button  class="insertButton" type="button" onclick="insertQuery()">Insert</button>
+        <button id="create-data" class="insertButton" type="button">New</button>
+    </div>
+
+    <div id="dialog-form" title="Create new user" style="display: none">
+        <p class="validateTips">All form fields are required.</p>
+
+        <form>
+            <fieldset>
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" class="text ui-widget-content ui-corner-all">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" class="text ui-widget-content ui-corner-all">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" class="text ui-widget-content ui-corner-all">
+                <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+            </fieldset>
+        </form>
     </div>
 </div>
 
