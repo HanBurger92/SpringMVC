@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.springmvc.dao.BasicDataManagementDao">
+
+    <resultMap id="ConsumerMap" type="Consumer">
+        <result property="consumerCode" column="consumer_code"/>
+        <result property="consumerName" column="consumer_name"/>
+        <result property="consumerAddress" column="consumer_address"/>
+        <result property="contactNumber" column="contact_number"/>
+        <result property="faxNumber" column="fax_number"/>
+        <result property="linkman" column="linkman"/>
+        <result property="remark" column="remark"/>
+    </resultMap>
+
+    <select id="selectConsumer" parameterType="Map" resultMap="ConsumerMap">
+        SELECT * FROM aoxing_consumer
+        WHERE 1=1
+        <if test="code != null">
+            AND consumer_code = #{code}
+        </if>
+        <if test="name != null">
+            AND consumer_name = #{name}
+        </if>
+        <if test="linkman != null">
+            AND linkman = #{linkman}
+        </if>
+    </select>
+
+    <insert id="insertConsumer" parameterType="com.springmvc.entity.Consumer">
+        INSERT INTO aoxing_consumer(consumer_code, consumer_name, consumer_address, contact_number, fax_number, linkman, remark)
+        VALUE (#{consumerCode},#{consumerName},#{consumerAddress},#{contactNumber},#{faxNumber},#{linkman},#{remark})
+    </insert>
+</mapper>

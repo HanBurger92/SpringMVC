@@ -25,7 +25,7 @@
 
     <!-- Display query for Consumer -->
    <div id="Consumer" class="query" style="display: none">
-        <form:form method="post" action="${pageContext.request.contextPath}/consumerSelect">
+        <form:form method="post" action="${pageContext.request.contextPath}/mainPage/basicDataManagement/consumerSelect">
             Consumer Code <input type="text" name="code"/>
             Consumer Name <input type="text" name="name"/>
             Link Man <input type="text" name="linkman"/>
@@ -38,7 +38,7 @@
 
     <!-- Display query for Supplier -->
     <div id="Supplier" class="query" style="display: none">
-        <form:form method="post" action="${pageContext.request.contextPath}/consumerSelect">
+        <form:form method="post" action="${pageContext.request.contextPath}/mainPage/basicDataManagement/supplierSelect">
             Supplier Code <input name="code"/>
             Supplier Name <input type="text" name="name"/>
             <div class="button">
@@ -50,7 +50,7 @@
 
     <!-- Display query for Product -->
     <div id="Product" class="query" style="display: none">
-        <form:form method="post" action="${pageContext.request.contextPath}/consumerSelect">
+        <form:form method="post" action="${pageContext.request.contextPath}/mainPage/basicDataManagement/productSelect">
             Product Code <input type="text" name="code"/>
             Product Name <input type="text" name="name"/>
             Product Category <input type="text" name="category">
@@ -61,43 +61,142 @@
         </form:form>
     </div>
 
-    <div id="insert">
-        <button id="create-data" class="insertButton" type="button">New</button>
-    </div>
+    <button id="create-data" class="insertButton" type="button">New</button>
 
-    <div id="dialog-form" title="Create new user" style="display: none">
-        <p class="validateTips">All form fields are required.</p>
-
-        <form>
-            <fieldset>
-                <label for="name">Name</label>
-                <input type="text" name="name" id="name" class="text ui-widget-content ui-corner-all">
-                <label for="email">Email</label>
-                <input type="text" name="email" id="email" class="text ui-widget-content ui-corner-all">
-                <label for="password">Password</label>
-                <input type="password" name="password" id="password" class="text ui-widget-content ui-corner-all">
-                <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
-            </fieldset>
+    <div id="consumer-dialog" title="create new data" style="display: none">
+        <form id="consumerForm">
+            <p>
+                Code:
+                <input type="text" name="consumerCode">
+            </p>
+            <p>
+                Consumer Name:
+                <input type="text" name="consumerName">
+            </p>
+            <p>
+                Consumer Address:
+                <input type="text" name="consumerAddress">
+            </p>
+            <p>
+                Contact Number
+                <input type="text" name="contactNumber">
+            </p>
+            <p>
+                Fax Number:
+                <input type="text" name="faxNumber">
+            </p>
+            <p>
+                Linkman:
+                <input type="text" name="linkman">
+            </p>
+            <p>
+                Remark:
+                <input type="text" name="remark">
+            </p>
         </form>
     </div>
+
+    <div id="product-dialog" title="create new data" style="display: none">
+        <form>
+            <p>
+                Code:
+                <input type="text" name="productCode">
+            </p>
+            <p>
+                Product Name:
+                <input type="text" name="productName">
+            </p>
+            <p>
+                Type:
+                <input type="text" name="type">
+            </p>
+            <p>
+                Category:
+                <input type="text" name="category">
+            </p>
+            <p>
+                Unit:
+                <input type="text" name="unit">
+            </p>
+            <p>
+                Cost
+                <input type="text" name="cost">
+            </p>
+            <p>
+                Price
+                <input type="text" name="price">
+            </p>
+            <p>
+                Certificate
+                <input type="text" name="certificate">
+            </p>
+            <p>
+                Expiration Date
+                <input type="date" name="expirationDate">
+            </p>
+        </form>
+    </div>
+
+    <div id="supplier-dialog" title="create new data" style="display: none">
+        <form>
+            <p>
+                Code:
+                <input type="text" name="supplierCode">
+            </p>
+            <p>
+                Supplier Name:
+                <input type="text" name="supplierName">
+            </p>
+            <p>
+                Supplier Address:
+                <input type="text" name="supplierAddress">
+            </p>
+            <p>
+                Contact Number
+                <input type="text" name="contactNumber">
+            </p>
+            <p>
+                Fax Number:
+                <input type="text" name="faxNumber">
+            </p>
+            <p>
+                Linkman:
+                <input type="text" name="linkman">
+            </p>
+            <p>
+                Remark:
+                <input type="text" name="remark">
+            </p>
+        </form>
+    </div>
+
 </div>
 
 <div id="ListBlock">
 
-    <div id="ConsumerList">
+    <div id="ConsumerList" style="display: none">
         <table>
             <tr>
                 <th>Code</th>
                 <th>Name</th>
+                <th>Address</th>
+                <th>Contact Number</th>
+                <th>Fax Number</th>
+                <th>linkman</th>
+                <th>remark</th>
+            </tr>
+
+            <tr>
+                <td></td>
             </tr>
         </table>
     </div>
 
-    <div id="SupplierList">
+    <div id="SupplierList" style="display: none">
 
     </div>
 
-    <div id="ProductList">
+    <div id="ProductList"style="display: none">
 
     </div>
 
