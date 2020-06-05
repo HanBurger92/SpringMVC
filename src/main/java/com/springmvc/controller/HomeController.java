@@ -13,7 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 
 @Controller
-@SessionAttributes({"username","password"}) // save user information to session
+@SessionAttributes({"username","password","role"}) // save user information to session
 @RequestMapping("/")
 public class HomeController {
 
@@ -46,6 +46,7 @@ public class HomeController {
         if(userService.login(user) == null){
             return "loginFail";
         }else{
+            model.addAttribute("role", userService.login(user).getRole()); // add Role to Session for authority check
             return "redirect:/mainPage";
         }
     }

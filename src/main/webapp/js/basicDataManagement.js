@@ -1,8 +1,16 @@
 var queriesToDisplay = ['Consumer','Supplier','Product'];
 var selectedType;
+var list;
+var form;
 
 // Jquery-ui code
 $(function(){
+
+    // alert message after insertion
+    var msg = $('#message').val();
+    if(msg != ''){
+        alert(msg);
+    }
 
     $("#consumer-dialog").dialog({
         autoOpen: false,
@@ -11,7 +19,8 @@ $(function(){
         modal: true,
         buttons: {
             "Confirm": function () {
-               $('#consumerForm').submit();
+                form = $('#consumerForm');
+                form.submit();
             },
             "Cancel": function () {
                 $(this).dialog("close");
@@ -26,7 +35,8 @@ $(function(){
         modal: true,
         buttons: {
             "Confirm": function () {
-                submitForm();
+                form = $('#supplierForm');
+                form.submit();
             },
             "Cancel": function () {
                 $(this).dialog("close");
@@ -41,12 +51,19 @@ $(function(){
         modal: true,
         buttons: {
             "Confirm": function () {
-                submitForm();
+                form = $('#productForm');
+                form.submit();
             },
             "Cancel": function () {
                 $(this).dialog("close");
             }
         }
+    });
+
+    // Write to Cookie when "Search" is clicked
+    $('.formButton').click(function () {
+        var selection = $("#selection").val();
+        document.cookie = "selection=" + selection;
     });
 
     // called when "New" button is clicked,
@@ -66,8 +83,69 @@ $(function(){
                 alert("Select which category you want to create new data");
                 break;
         }
+    });
 
+    //Update dialog
+    $('#updateConsumer').click(function () {
+        var consumerCode = $(this).data('consumerCode');
+        $('#consumerCode').val(consumerCode);
+        $('#consumerCode').prop('disabled',true);
+        $('#consumer-dialog').dialog('open');
+        $('#consumer-dialog').dialog({
+            title: 'Update data',
+            buttons:{
+                "Confirm": function () {
+                    form = $('#consumerForm');
+                    form.attr("action","${pageContext.request.contextPath}/mainPage/basicDataManagement/consumerUpdate");
+                    alert(form.attr("action"));
+                },
+                "Cancel": function () {
+                    $(this).dialog("close");
+                }
+            }
+        })
+    });
+
+    $('#updateSupplier').click(function () {
+        var supplierCode = $(this).data('supplierCode');
+        $('#supplierCode').val(supplierCode);
+        $('#supplierCode').prop('disabled',true);
+        $('#supplier-dialog').dialog('open');
+        $('#supplier-dialog').dialog({
+            title: 'Update data',
+            buttons:{
+                "Confirm": function () {
+                    form = $('#supplierForm');
+                    form.attr("action","${pageContext.request.contextPath}/mainPage/basicDataManagement/supplierUpdate");
+                    alert(form.attr("action"));
+                },
+                "Cancel": function () {
+                    $(this).dialog("close");
+                }
+            }
+        })
+    });
+
+    $('#updateProduct').click(function () {
+        var productCode = $(this).data('productCode');
+        $('#productCode').val(productCode);
+        $('#productCode').prop('disabled',true);
+        $('#product-dialog').dialog('open');
+        $('#product-dialog').dialog({
+            title: 'Update data',
+            buttons:{
+                "Confirm": function () {
+                    form = $('#supplierForm');
+                    form.attr("action","${pageContext.request.contextPath}/mainPage/basicDataManagement/productUpdate");
+                    alert(form.attr("action"));
+                },
+                "Cancel": function () {
+                    $(this).dialog("close");
+                }
+            }
+        })
     })
+
 });
 // end of Jquery-ui
 
@@ -77,9 +155,13 @@ function displayQueryOption(option) {
     for(var i=0; i<queriesToDisplay.length; i++){
         selectedType = document.getElementById(queriesToDisplay[i]);
         if (option.value != queriesToDisplay[i]){
-            selectedType.style.display='none'
+            selectedType.style.display='none';
         }else{
             selectedType.style.display='';
         }
     }
 }
+
+
+
+

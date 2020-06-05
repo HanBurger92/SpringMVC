@@ -1,4 +1,5 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page isELIgnored="false" %>
 <html>
@@ -9,15 +10,41 @@
     <script src="${pageContext.request.contextPath}/webjars/jquery/1.12.0/jquery.min.js"></script>
     <script src="${pageContext.request.contextPath}/webjars/jquery-ui/1.12.1/jquery-ui.min.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/basicDataManagement.js"></script>
+
+    <script>
+        $(function() {
+            var cookie = document.cookie.split(";");
+            switch (cookie[0]) {
+                case 'selection=Consumer':
+                    $('#selection').val('Consumer');
+                    $('#Consumer').show();
+                    $('#ConsumerList').show();
+                    break;
+                case 'selection=Supplier':
+                    $('#selection').val('Supplier');
+                    $('#Supplier').show();
+                    $('#SupplierList').show();
+                    break;
+                case 'selection=Product':
+                    $('#selection').val('Product');
+                    $('#Product').show();
+                    $('#ProductList').show();
+                    break;
+            }
+        })
+    </script>
 </head>
 <body>
+
+<input id="message" type="hidden" value="${msg}">
+<p>
+    msg:${msg};
+</p>
 
 <div id="headerBlock">
 
     <select id="selection" class="selection" onchange="displayQueryOption(this)">
-        <option value="none" selected disabled hidden>
-            N/A
-        </option>
+        <option value="" disabled selected hidden>N/A</option>
         <option value="Consumer">Consumer</option>
         <option value="Supplier">Supplier</option>
         <option value="Product">Product</option>
@@ -41,6 +68,7 @@
         <form:form method="post" action="${pageContext.request.contextPath}/mainPage/basicDataManagement/supplierSelect">
             Supplier Code <input name="code"/>
             Supplier Name <input type="text" name="name"/>
+            Link Man<input type="text" name="linkman"/>
             <div class="button">
                 <button class="formButton" type="submit" value="Search">Search</button>
                 <button class="formButton" type="reset" value="Reset">Reset</button>
@@ -64,10 +92,10 @@
     <button id="create-data" class="insertButton" type="button">New</button>
 
     <div id="consumer-dialog" title="create new data" style="display: none">
-        <form id="consumerForm">
+        <form id="consumerForm" method="post" action="${pageContext.request.contextPath}/mainPage/basicDataManagement/consumerInsert">
             <p>
                 Code:
-                <input type="text" name="consumerCode">
+                <input type="text" id='consumerCode' name="consumerCode">
             </p>
             <p>
                 Consumer Name:
@@ -97,7 +125,7 @@
     </div>
 
     <div id="product-dialog" title="create new data" style="display: none">
-        <form>
+        <form id="productForm" method="post" action="${pageContext.request.contextPath}/mainPage/basicDataManagement/productInsert">
             <p>
                 Code:
                 <input type="text" name="productCode">
@@ -138,7 +166,7 @@
     </div>
 
     <div id="supplier-dialog" title="create new data" style="display: none">
-        <form>
+        <form id="supplierForm" method="post" action="${pageContext.request.contextPath}/mainPage/basicDataManagement/supplierInsert">
             <p>
                 Code:
                 <input type="text" name="supplierCode">
@@ -184,20 +212,91 @@
                 <th>Fax Number</th>
                 <th>linkman</th>
                 <th>remark</th>
+                <th>ACTION</th>
             </tr>
 
-            <tr>
-                <td></td>
-            </tr>
+            <c:forEach items="${requestScope.consumerList}" var="consumers">
+                <tr>
+                    <td>${consumers.consumerCode}</td>
+                    <td>${consumers.consumerName}</td>
+                    <td>${consumers.consumerAddress}</td>
+                    <td>${consumers.contactNumber}</td>
+                    <td>${consumers.faxNumber}</td>
+                    <td>${consumers.linkman}</td>
+                    <td>${consumers.remark}</td>
+                    <td>
+                        <button class="deleteButton" type="button">DELETE</button>
+                        <button id="updateConsumer" type="button" data-consumer-code="${consumers.consumerCode}">EDIT</button>
+                    </td>
+                </tr>
+            </c:forEach>
         </table>
     </div>
 
     <div id="SupplierList" style="display: none">
+        <table>
+            <tr>
+                <th>Code</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Contact Number</th>
+                <th>Fax Number</th>
+                <th>linkman</th>
+                <th>remark</th>
+                <th>ACTION</th>
+            </tr>
 
+            <c:forEach items="${requestScope.supplierList}" var="suppliers">
+                <tr>
+                    <td>${suppliers.supplierCode}</td>
+                    <td>${suppliers.supplierName}</td>
+                    <td>${suppliers.supplierAddress}</td>
+                    <td>${suppliers.contactNumber}</td>
+                    <td>${suppliers.faxNumber}</td>
+                    <td>${suppliers.linkman}</td>
+                    <td>${suppliers.remark}</td>
+                    <td>
+                        <a href="/mainPage/basicDataManagement/supplierDelete?supplierCode=${suppliers.supplierCode}">DELETE</a>
+                        <a href="/mainPage/basicDataManagement/supplierUpdate?supplierCode=${suppliers.supplierCode}">UPDATE</a>
+                    </td>
+                </tr>
+            </c:forEach>
+        </table>
     </div>
 
-    <div id="ProductList"style="display: none">
+    <div id="ProductList" style="display: none">
+        <table>
+            <tr>
+                <th>Code</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Category</th>
+                <th>Unit</th>
+                <th>Cost</th>
+                <th>Price</th>
+                <th>Certificate</th>
+                <th>Expiration Date</th>
+                <th>ACTION</th>
+            </tr>
 
+            <c:forEach items="${requestScope.productList}" var="products">
+                <tr>
+                    <td>${products.productCode}</td>
+                    <td>${products.productName}</td>
+                    <td>${products.type}</td>
+                    <td>${products.category}</td>
+                    <td>${products.unit}</td>
+                    <td>${products.cost}</td>
+                    <td>${products.price}</td>
+                    <td>${products.certificate}</td>
+                    <td>${products.expirationDate}</td>
+                    <td>
+                        <a href="/mainPage/basicDataManagement/productDelete?productCode=${products.productCode}">DELETE</a>
+                        <a href="/mainPage/basicDataManagement/productUpdate?productCode=${products.productCode}">UPDATE</a>
+                    </td>
+                </tr>
+            </c:forEach>
+        </table>
     </div>
 
 </div>

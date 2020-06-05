@@ -10,19 +10,13 @@
 }
 
 #ListBlock{
-
-}
-
-#consumer{
-
-}
-
-#supplier{
-
-}
-
-#product{
-
+    width: 1915px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 100px;
+    left: 0;
 }
 
 /* class */
