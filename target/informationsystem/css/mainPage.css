@@ -1,0 +1,59 @@
+#headerBlock{
+    width: 1919px;
+    height: 25px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #87CEFA;
+    text-align: left;
+}
+
+#gradient{
+    background: whitesmoke; /* Default color when browser do not support gradient*/
+}
+
+#basicDataManagement{
+    position: absolute;
+    left: 200px;
+    top: 100px;
+    text-align: center;
+    width: 500px;
+}
+
+#inboundLogisticsManagement{
+    position: absolute;
+    left: 1200px;
+    top: 120px;
+    text-align: center;
+    width: 500px;
+}
+
+#outboundLogisticsManagement{
+    position: absolute;
+    left: 200px;
+    top: 600px;
+    text-align: center;
+    width: 500px;
+}
+
+#comprehensiveStatement{ /* todo: change it to userSetting */
+    position: absolute;
+    left: 1200px;
+    top: 600px;
+    text-align: center;
+    width: 500px;
+}
+
+#footer{
+    text-align: left;
+    width: 1919px;
+    height: 25px;
+    padding: 0;
+    position: absolute;
+    top: 943px;
+    left: 0;
+    background: #87CEFA;
+    color: black;
+}

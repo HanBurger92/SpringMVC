@@ -1,0 +1,87 @@
+/* Global */
+table{
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+}
+
+th{
+    padding: 5px;
+    text-align: left;
+    border-bottom: 1px solid #dddddd;
+    background-color: #f5f5f5;
+}
+
+td{
+    padding: 5px;
+    text-align: left;
+    border-bottom: 1px solid #dddddd;
+}
+
+tr:hover {
+    background: #f5f5f5;
+}
+
+#headerBlock{
+    width: 1915px;
+    height: 100px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #87CEFA;
+}
+
+#ListBlock{
+    width: 1915px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 100px;
+    left: 0;
+}
+
+/* class */
+.selection{
+    position: absolute;
+    top: 40px;
+    left: 30px;
+}
+
+.query{
+    position: absolute;
+    top: 35px;
+    left: 200px;
+    width: 1000px;
+}
+
+.insertButton{
+    position: absolute;
+    right: 100px;
+    top: 30px;
+    height: 40px;
+    width: 100px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    text-align: center;
+    font-size: small;
+}
+
+.insertButton:hover{
+    background: #008CFA;
+    color: #FFFFFF;
+}
+
+.formButton{
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+.formButton:hover{
+    background: #009cFA;
+    color: #FFFFFF;
+}
+

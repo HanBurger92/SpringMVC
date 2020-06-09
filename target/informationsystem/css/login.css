@@ -1,0 +1,18 @@
+#gradient{
+    background: aquamarine; /* Default color when browser do not support gradient*/
+    background: linear-gradient(#87CEFA,#4682B4);
+}
+
+#headerBlock{
+    text-align: center;
+    padding-top: 300px;
+}
+
+#loginBlock{
+    text-align: center;
+}
+
+#warning{
+    color: red;
+    text-align: center;
+}
