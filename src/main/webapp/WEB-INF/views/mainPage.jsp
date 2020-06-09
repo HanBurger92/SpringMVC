@@ -10,8 +10,9 @@
 <body id="gradient">
 
 <div id="headerBlock">
-    Hello!&nbsp; ${sessionScope.username}
-    <a href="${pageContext.request.contextPath}/mainPage/userSetting"> setting </a>
+    &nbsp; Hello!&nbsp; ${sessionScope.username}
+    Your Identity is &nbsp;${sessionScope.role}
+    <a href="${pageContext.request.contextPath}/"> Log Out </a>
 </div>
 
 <div id="basicDataManagement" class="animate__animated animate__bounceIn">
@@ -33,13 +34,13 @@
 </div>
 
 <div id="comprehensiveStatement" class="animate__animated animate__bounceIn">
-    <a href="${pageContext.request.contextPath}/mainPage/comprehensiveStatement"> <img border="0" width="50%" src="${pageContext.request.contextPath}/images/comprehensiveStatement.png">  </a>
+    <a href="${pageContext.request.contextPath}/mainPage/userSetting"> <img border="0" width="50%" src="${pageContext.request.contextPath}/images/userSetting.png">  </a>
     <br/>
-    Comprehensive Statement
+    User Setting
 </div>
 
 <div id="footer">
-    Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+    &nbsp; Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
 </div>
 </body>
 </html>

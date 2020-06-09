@@ -1,3 +1,28 @@
+/* Global */
+table{
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+}
+
+th{
+    padding: 5px;
+    text-align: left;
+    border-bottom: 1px solid #dddddd;
+    background-color: #f5f5f5;
+}
+
+td{
+    padding: 5px;
+    text-align: left;
+    border-bottom: 1px solid #dddddd;
+}
+
+tr:hover {
+    background: #f5f5f5;
+}
+
 #headerBlock{
     width: 1915px;
     height: 100px;
@@ -59,3 +84,4 @@
     background: #009cFA;
     color: #FFFFFF;
 }
+

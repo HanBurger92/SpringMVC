@@ -6,8 +6,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    background: #4682B4;
-    text-align: right;
+    background: #87CEFA;
+    text-align: left;
 }
 
 #gradient{
@@ -47,13 +47,13 @@
 }
 
 #footer{
-    text-align: right;
+    text-align: left;
     width: 1919px;
     height: 25px;
     padding: 0;
     position: absolute;
     top: 943px;
     left: 0;
-    background: #4682B4;
-    color: white;
+    background: #87CEFA;
+    color: black;
 }

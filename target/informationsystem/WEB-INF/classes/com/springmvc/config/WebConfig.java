@@ -38,6 +38,7 @@ public class WebConfig implements WebMvcConfigurer{
     }
 
     // to prevent adding parameter in the url automatically
+    // thus dispatcher can find correspond controllers and views precisely
     @PostConstruct
     public void init(){
         requestMappingHandlerAdapter.setIgnoreDefaultModelOnRedirect(true);

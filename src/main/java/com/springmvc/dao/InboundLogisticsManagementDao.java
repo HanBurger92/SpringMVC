@@ -1,4 +1,7 @@
 package com.springmvc.dao;
 
-public class InboundLogisticsManagementDao {
+import org.springframework.stereotype.Repository;
+
+@Repository("inboundLogisticsManagement")
+public interface InboundLogisticsManagementDao {
 }

@@ -57,15 +57,30 @@
         VALUE (#{consumerCode},#{consumerName},#{consumerAddress},#{contactNumber},#{faxNumber},#{linkman},#{remark})
     </insert>
 
+    <update id="updateConsumer" parameterType="com.springmvc.entity.Consumer">
+        UPDATE aoxing_consumer
+        SET
+        consumer_name=#{consumerName}, consumer_address=#{consumerAddress},contact_number=#{contactNumber},
+        fax_number=#{faxNumber}, linkman=#{linkman}, remark=#{remark}
+        WHERE consumer_code = #{consumerCode}
+    </update>
+
+    <delete id="deleteConsumer" parameterType="String">
+        DELETE FROM
+        aoxing_consumer
+        WHERE
+        consumer_code = #{consumerCode}
+    </delete>
+
     <!-- Supplier Query -->
     <select id="selectSupplier" parameterType="Map" resultMap="SupplierMap">
         SELECT * FROM aoxing_supplier
         WHERE 1=1
         <if test="code != null and code != ''">
-            AND consumer_code = #{code}
+            AND supplier_code = #{code}
         </if>
         <if test="name != null and name != ''">
-            AND consumer_name = #{name}
+            AND supplier_name = #{name}
         </if>
         <if test="linkman != null and linkman != ''">
             AND linkman = #{linkman}
@@ -77,23 +92,47 @@
         VALUE (#{supplierCode},#{supplierName},#{supplierAddress},#{contactNumber},#{faxNumber},#{linkman},#{remark})
     </insert>
 
+    <update id="updateSupplier" parameterType="com.springmvc.entity.Supplier">
+        UPDATE aoxing_supplier
+        SET
+        supplier_name=#{supplierName}, supplier_address=#{supplierAddress},contact_number=#{contactNumber},
+        fax_number=#{faxNumber}, linkman=#{linkman}, remark=#{remark}
+        WHERE supplier_code=#{supplierCode}
+    </update>
+
+    <delete id="deleteSupplier" parameterType="String">
+        DELETE FROM
+        aoxing_supplier
+        WHERE
+        supplier_code = #{supplierCode}
+    </delete>
+
     <!-- Product Query -->
     <select id="selectProduct" parameterType="Map" resultMap="ProductMap">
         SELECT * FROM aoxing_product
         WHERE 1=1
         <if test="code != null and code != ''">
-            AND consumer_code = #{code}
+            AND product_code = #{code}
         </if>
         <if test="name != null and name != ''">
-            AND consumer_name = #{name}
+            AND product_name = #{name}
         </if>
         <if test="category != null and category != ''">
-            AND linkman = #{linkman}
+            AND category = #{category}
         </if>
     </select>
 
     <insert id="insertProduct" parameterType="com.springmvc.entity.Product">
         INSERT INTO aoxing_product(product_code, product_name, type, category, unit, cost, price, certificate, expiration_date)
-        VALUE (#{productCode},#{productName},#{type},#{category},#{unit},#{cost},#{price},#{certificate},#{expiration_date})
+        VALUE (#{productCode},#{productName},#{type},#{category},#{unit},#{cost},#{price},#{certificate},#{expirationDate})
     </insert>
+
+    <update id="updateProduct" parameterType="com.springmvc.entity.Product">
+        UPDATE aoxing_product
+        SET
+        product_name=#{productName}, type=#{type}, category=#{category}, unit=#{unit}, cost=#{cost}
+        ,price=#{price}, certificate=#{certificate}, expiration_date=#{expirationDate}
+        WHERE
+        product_code=#{productCode}
+    </update>
 </mapper>

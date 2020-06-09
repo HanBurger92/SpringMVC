@@ -35,8 +35,8 @@ public class RootConfig implements TransactionManagementConfigurer {
     public BasicDataSource initDataSource(){
 
         BasicDataSource ds = new BasicDataSource();
-        ds.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        ds.setUrl("jdbc:mysql://localhost:3306/aoxing?serverTimezone=GMT");
+        ds.setDriverClassName("com.mysql.cj.jdbc.Driver"); // MySQL 8.0 need new driverClass instead of the old one
+        ds.setUrl("jdbc:mysql://localhost:3306/aoxing?serverTimezone=GMT"); // TimeZone is to prevent BUG of the 8.0 MySQL
         ds.setUsername("root");
         ds.setPassword("duoduo9922");
         return ds;
@@ -51,9 +51,9 @@ public class RootConfig implements TransactionManagementConfigurer {
         SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
         sqlSessionFactoryBean.setDataSource(initDataSource());
         Resource resource = new ClassPathResource("mybatis-config.xml");
-        sqlSessionFactoryBean.setConfigLocation(resource);
+        sqlSessionFactoryBean.setConfigLocation(resource); // read MyBatis configuration form specific xml file
         PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
-        sqlSessionFactoryBean.setMapperLocations(resolver.getResources("classpath:mapper/*.xml"));
+        sqlSessionFactoryBean.setMapperLocations(resolver.getResources("classpath:mapper/*.xml")); // To tell the system where to find mapper
         return sqlSessionFactoryBean;
     }
 
@@ -64,9 +64,9 @@ public class RootConfig implements TransactionManagementConfigurer {
     @Bean
     public MapperScannerConfigurer initMapperScannerConfigurer(){
         MapperScannerConfigurer mapperScannerConfigurer = new MapperScannerConfigurer();
-        mapperScannerConfigurer.setBasePackage("com.*");
+        mapperScannerConfigurer.setBasePackage("com.*"); // To tell the System which package to scan and find mapper
         mapperScannerConfigurer.setSqlSessionFactoryBeanName("sqlSessionFactoryBean");
-        mapperScannerConfigurer.setAnnotationClass(Repository.class);
+        mapperScannerConfigurer.setAnnotationClass(Repository.class); // Annotation configuration
         return mapperScannerConfigurer;
     }
 

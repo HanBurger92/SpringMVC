@@ -12,6 +12,8 @@
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/basicDataManagement.js"></script>
 
     <script>
+        // Cookie is used to lock the selection box when the web page is refresh
+        // Show the correspond search list base on the selection box after the web page is refresh
         $(function() {
             var cookie = document.cookie.split(";");
             switch (cookie[0]) {
@@ -36,12 +38,15 @@
 </head>
 <body>
 
+<!-- This is used to show messages that are parsed from Server (SUCCESS,FAIL)-->
 <input id="message" type="hidden" value="${msg}">
 <p>
     msg:${msg};
 </p>
 
 <div id="headerBlock">
+
+    <a href="${pageContext.request.contextPath}/mainPage">Main Page</a>
 
     <select id="selection" class="selection" onchange="displayQueryOption(this)">
         <option value="" disabled selected hidden>N/A</option>
@@ -55,7 +60,7 @@
         <form:form method="post" action="${pageContext.request.contextPath}/mainPage/basicDataManagement/consumerSelect">
             Consumer Code <input type="text" name="code"/>
             Consumer Name <input type="text" name="name"/>
-            Link Man <input type="text" name="linkman"/>
+            Link Man <input type="text" name="linkmanSearch"/> <!-- to avoid duplicate name attribute,add search -->
             <div class="button">
                 <button class="formButton" type="submit" value="Search">Search</button>
                 <button class="formButton" type="reset" value="Reset">Reset</button>
@@ -68,7 +73,7 @@
         <form:form method="post" action="${pageContext.request.contextPath}/mainPage/basicDataManagement/supplierSelect">
             Supplier Code <input name="code"/>
             Supplier Name <input type="text" name="name"/>
-            Link Man<input type="text" name="linkman"/>
+            Link Man<input type="text" name="linkmanSearch"/>
             <div class="button">
                 <button class="formButton" type="submit" value="Search">Search</button>
                 <button class="formButton" type="reset" value="Reset">Reset</button>
@@ -81,7 +86,7 @@
         <form:form method="post" action="${pageContext.request.contextPath}/mainPage/basicDataManagement/productSelect">
             Product Code <input type="text" name="code"/>
             Product Name <input type="text" name="name"/>
-            Product Category <input type="text" name="category">
+            Product Category <input type="text" name="categorySearch">
             <div class="button">
                 <button class="formButton" type="submit" value="Search">Search</button>
                 <button class="formButton" type="reset" value="Reset">Reset</button>
@@ -91,11 +96,12 @@
 
     <button id="create-data" class="insertButton" type="button">New</button>
 
+    <!-- Dialogs for Insertion -->
     <div id="consumer-dialog" title="create new data" style="display: none">
         <form id="consumerForm" method="post" action="${pageContext.request.contextPath}/mainPage/basicDataManagement/consumerInsert">
             <p>
                 Code:
-                <input type="text" id='consumerCode' name="consumerCode">
+                <input type="text" name="consumerCode">
             </p>
             <p>
                 Consumer Name:
@@ -198,12 +204,120 @@
         </form>
     </div>
 
+    <!-- dialog for update -->
+    <div id="consumer-update-dialog" title="Update data" style="display: none">
+        <form id="consumerUpdateForm" method="post" action="${pageContext.request.contextPath}/mainPage/basicDataManagement/consumerUpdate">
+            <p>
+                Code:
+                <input type="text" name="consumerCode" >
+            </p>
+            <p>
+                Consumer Name:
+                <input type="text" name="consumerName">
+            </p>
+            <p>
+                Consumer Address:
+                <input type="text" name="consumerAddress">
+            </p>
+            <p>
+                Contact Number
+                <input type="text" name="contactNumber">
+            </p>
+            <p>
+                Fax Number:
+                <input type="text" name="faxNumber">
+            </p>
+            <p>
+                Linkman:
+                <input type="text" name="linkman">
+            </p>
+            <p>
+                Remark:
+                <input type="text" name="remark">
+            </p>
+        </form>
+    </div>
+
+    <div id="product-update-dialog" title="Update data" style="display: none">
+        <form id="productUpdateForm" method="post" action="${pageContext.request.contextPath}/mainPage/basicDataManagement/productUpdate">
+            <p>
+                Code:
+                <input type="text" name="productCode">
+            </p>
+            <p>
+                Product Name:
+                <input type="text" name="productName">
+            </p>
+            <p>
+                Type:
+                <input type="text" name="type">
+            </p>
+            <p>
+                Category:
+                <input type="text" name="category">
+            </p>
+            <p>
+                Unit:
+                <input type="text" name="unit">
+            </p>
+            <p>
+                Cost
+                <input type="number" name="cost" step="0.01">
+            </p>
+            <p>
+                Price
+                <input type="number" name="price" step="0.01">
+            </p>
+            <p>
+                Certificate
+                <input type="text" name="certificate">
+            </p>
+            <p>
+                Expiration Date
+                <input type="date" name="expirationDate">
+            </p>
+        </form>
+    </div>
+
+    <div id="supplier-update-dialog" title="Update data" style="display: none">
+        <form id="supplierUpdateForm" method="post" action="${pageContext.request.contextPath}/mainPage/basicDataManagement/supplierUpdate">
+            <p>
+                Code:
+                <input type="text" name="supplierCode">
+            </p>
+            <p>
+                Supplier Name:
+                <input type="text" name="supplierName">
+            </p>
+            <p>
+                Supplier Address:
+                <input type="text" name="supplierAddress">
+            </p>
+            <p>
+                Contact Number
+                <input type="text" name="contactNumber">
+            </p>
+            <p>
+                Fax Number:
+                <input type="text" name="faxNumber">
+            </p>
+            <p>
+                Linkman:
+                <input type="text" name="linkman">
+            </p>
+            <p>
+                Remark:
+                <input type="text" name="remark">
+            </p>
+        </form>
+    </div>
+
 </div>
 
 <div id="ListBlock">
 
     <div id="ConsumerList" style="display: none">
-        <table>
+        <table class="searchList">
             <tr>
                 <th>Code</th>
                 <th>Name</th>
@@ -225,8 +339,20 @@
                     <td>${consumers.linkman}</td>
                     <td>${consumers.remark}</td>
                     <td>
-                        <button class="deleteButton" type="button">DELETE</button>
-                        <button id="updateConsumer" type="button" data-consumer-code="${consumers.consumerCode}">EDIT</button>
+                        <a href="${pageContext.request.contextPath}/mainPage/basicDataManagement/consumerDelete?consumerCode=${consumers.consumerCode}">
+                            <button class="deleteButton" type="button">
+                                DELETE
+                            </button>
+                        </a>
+                        |
+                        <button class="updateConsumer" type="button"
+                                data-consumer-code="${consumers.consumerCode}"
+                                data-consumer-name="${consumers.consumerName}"
+                                data-consumer-address="${consumers.consumerAddress}"
+                                data-contact-number="${consumers.contactNumber}"
+                                data-fax-number="${consumers.faxNumber}"
+                                data-linkman="${consumers.linkman}"
+                                data-remark="${consumers.remark}">EDIT</button>
                     </td>
                 </tr>
             </c:forEach>
@@ -234,7 +360,7 @@
     </div>
 
     <div id="SupplierList" style="display: none">
-        <table>
+        <table class="searchList">
             <tr>
                 <th>Code</th>
                 <th>Name</th>
@@ -256,8 +382,20 @@
                     <td>${suppliers.linkman}</td>
                     <td>${suppliers.remark}</td>
                     <td>
-                        <a href="/mainPage/basicDataManagement/supplierDelete?supplierCode=${suppliers.supplierCode}">DELETE</a>
-                        <a href="/mainPage/basicDataManagement/supplierUpdate?supplierCode=${suppliers.supplierCode}">UPDATE</a>
+                        <a href="${pageContext.request.contextPath}/mainPage/basicDataManagement/supplierDelete?supplierCode=${suppliers.supplierCode}">
+                            <button class="deleteButton" type="button">
+                                DELETE
+                            </button>
+                        </a>
+                        |
+                        <button class="updateSupplier" type="button"
+                                data-supplier-code="${suppliers.supplierCode}"
+                                data-supplier-name="${suppliers.supplierName}"
+                                data-supplier-address="${suppliers.supplierAddress}"
+                                data-contact-number="${suppliers.contactNumber}"
+                                data-fax-number="${suppliers.faxNumber}"
+                                data-linkman="${suppliers.linkman}"
+                                data-remark="${suppliers.remark}">EDIT</button>
                     </td>
                 </tr>
             </c:forEach>
@@ -265,7 +403,7 @@
     </div>
 
     <div id="ProductList" style="display: none">
-        <table>
+        <table class="searchList">
             <tr>
                 <th>Code</th>
                 <th>Name</th>
@@ -291,8 +429,22 @@
                     <td>${products.certificate}</td>
                     <td>${products.expirationDate}</td>
                     <td>
-                        <a href="/mainPage/basicDataManagement/productDelete?productCode=${products.productCode}">DELETE</a>
-                        <a href="/mainPage/basicDataManagement/productUpdate?productCode=${products.productCode}">UPDATE</a>
+                        <a href="${pageContext.request.contextPath}/mainPage/basicDataManagement/productDelete?productCode=${products.productCode}">
+                            <button class="deleteButton" type="button">
+                                DELETE
+                            </button>
+                        </a>
+                        |
+                        <button class="updateProduct" type="button"
+                                data-product-code="${products.productCode}"
+                                data-product-name="${products.productName}"
+                                data-type="${products.type}"
+                                data-category="${products.category}"
+                                data-unit="${products.unit}"
+                                data-cost="${products.cost}"
+                                data-price="${products.price}"
+                                data-certificate="${products.certificate}"
+                                data-expiration-date="${products.expirationDate}">EDIT</button>
                     </td>
                 </tr>
             </c:forEach>

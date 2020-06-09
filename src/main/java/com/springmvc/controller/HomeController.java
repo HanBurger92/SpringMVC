@@ -11,9 +11,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 
 @Controller
-@SessionAttributes({"username","password","role"}) // save user information to session
 @RequestMapping("/")
 public class HomeController {
 
@@ -26,27 +28,19 @@ public class HomeController {
         return "home";
     }
 
-    /**
-     * Check userName and password input by the user at login page
-     * save the information to the session (by annotation @SessionAttribute and ModelMap)
-     * @param userName
-     * @param password
-     * @param model
-     * @return
-     */
     @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public String login(@RequestParam String userName, @RequestParam String password, ModelMap model){
+    public String login(HttpServletRequest request){
+        HttpSession session = request.getSession();
         user = new User();
-        user.setUserName(userName);
-        user.setPassword(password);
-
-        model.addAttribute("username", userName);
-        model.addAttribute("password", password);
+        user.setUserName(request.getParameter("userName"));
+        user.setPassword(request.getParameter("password"));
 
         if(userService.login(user) == null){
             return "loginFail";
         }else{
-            model.addAttribute("role", userService.login(user).getRole()); // add Role to Session for authority check
+            user = userService.login(user);
+            session.setAttribute("username",user.getUserName());
+            session.setAttribute("role", user.getRole());
             return "redirect:/mainPage";
         }
     }

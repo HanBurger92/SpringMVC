@@ -30,7 +30,7 @@ public class MainController {
 
     @RequestMapping(value = "/comprehensiveStatement", method = RequestMethod.GET)
     public String comprehensiveStatement(){
-        return "comprehensiveStatement";
+        return "userSetting";
     }
 
     @RequestMapping(value = "/userSetting" , method = RequestMethod.GET)
