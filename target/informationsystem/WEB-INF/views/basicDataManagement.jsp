@@ -6,9 +6,10 @@
 <head>
     <title>basic data management</title>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/basicDataManagement.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/basic.css">
     <script src="${pageContext.request.contextPath}/webjars/jquery/1.12.0/jquery.min.js"></script>
     <script src="${pageContext.request.contextPath}/webjars/jquery-ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="${pageContext.request.contextPath}/webjars/jquery-validation/1.19.0/jquery.validate.min.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/basicDataManagement.js"></script>
 
     <script>
@@ -37,6 +38,14 @@
     </script>
 </head>
 <body>
+
+<!-- JSP code: Check Login Status, To prevent user jump through login in stage with URL -->
+<%
+    String name = (String)session.getAttribute("username");
+    if (name==null){
+        response.sendRedirect("/");
+    }
+%>
 
 <!-- This is used to show messages that are parsed from Server (SUCCESS,FAIL)-->
 <input id="message" type="hidden" value="${msg}">
@@ -146,11 +155,11 @@
             </p>
             <p>
                 Category:
-                <input type="text" name="category">
+                <input type="number" name="category"  step="0.01">
             </p>
             <p>
                 Unit:
-                <input type="text" name="unit">
+                <input type="number" name="unit" step="0.01">
             </p>
             <p>
                 Cost
@@ -209,31 +218,31 @@
         <form id="consumerUpdateForm" method="post" action="${pageContext.request.contextPath}/mainPage/basicDataManagement/consumerUpdate">
             <p>
                 Code:
-                <input type="text" name="consumerCode" >
+                <input type="text" name="consumerCode" id="consumerCodeUpdate">
             </p>
             <p>
                 Consumer Name:
-                <input type="text" name="consumerName">
+                <input type="text" name="consumerName" id="consumerNameUpdate">
             </p>
             <p>
                 Consumer Address:
-                <input type="text" name="consumerAddress">
+                <input type="text" name="consumerAddress" id="consumerAddressUpdate">
             </p>
             <p>
                 Contact Number
-                <input type="text" name="contactNumber">
+                <input type="text" name="contactNumber" id="contactNumberUpdate">
             </p>
             <p>
                 Fax Number:
-                <input type="text" name="faxNumber">
+                <input type="text" name="faxNumber" id="faxNumberUpdate">
             </p>
             <p>
                 Linkman:
-                <input type="text" name="linkman">
+                <input type="text" name="linkman" id="linkmanUpdate">
             </p>
             <p>
                 Remark:
-                <input type="text" name="remark">
+                <input type="text" name="remark" id="remarkUpdate">
             </p>
         </form>
     </div>
@@ -242,39 +251,39 @@
         <form id="productUpdateForm" method="post" action="${pageContext.request.contextPath}/mainPage/basicDataManagement/productUpdate">
             <p>
                 Code:
-                <input type="text" name="productCode">
+                <input type="text" name="productCode" id="productCodeUpdate">
             </p>
             <p>
                 Product Name:
-                <input type="text" name="productName">
+                <input type="text" name="productName" id="productNameUpdate">
             </p>
             <p>
                 Type:
-                <input type="text" name="type">
+                <input type="text" name="type" id="typeUpdate">
             </p>
             <p>
                 Category:
-                <input type="text" name="category">
+                <input type="text" name="category" id="categoryUpdate">
             </p>
             <p>
                 Unit:
-                <input type="text" name="unit">
+                <input type="text" name="unit" id="unitUpdate">
             </p>
             <p>
                 Cost
-                <input type="number" name="cost" step="0.01">
+                <input type="number" name="cost" step="0.01" id="costUpdate">
             </p>
             <p>
                 Price
-                <input type="number" name="price" step="0.01">
+                <input type="number" name="price" step="0.01" id="priceUpdate">
             </p>
             <p>
                 Certificate
-                <input type="text" name="certificate">
+                <input type="text" name="certificate" id="certificateUpdate">
             </p>
             <p>
                 Expiration Date
-                <input type="date" name="expirationDate">
+                <input type="date" name="expirationDate" id="expirationDateUpdate">
             </p>
         </form>
     </div>
@@ -283,31 +292,31 @@
         <form id="supplierUpdateForm" method="post" action="${pageContext.request.contextPath}/mainPage/basicDataManagement/supplierUpdate">
             <p>
                 Code:
-                <input type="text" name="supplierCode">
+                <input type="text" name="supplierCode" id="supplierCodeUpdate">
             </p>
             <p>
                 Supplier Name:
-                <input type="text" name="supplierName">
+                <input type="text" name="supplierName" id="supplierNameUpdate">
             </p>
             <p>
                 Supplier Address:
-                <input type="text" name="supplierAddress">
+                <input type="text" name="supplierAddress" id="supplierAddressUpdate">
             </p>
             <p>
                 Contact Number
-                <input type="text" name="contactNumber">
+                <input type="text" name="contactNumber" id="contactNumberSupplierUpdate">
             </p>
             <p>
                 Fax Number:
-                <input type="text" name="faxNumber">
+                <input type="text" name="faxNumber" id="faxNumberSupplierUpdate">
             </p>
             <p>
                 Linkman:
-                <input type="text" name="linkman">
+                <input type="text" name="linkman" id="linkmanSupplierUpdate">
             </p>
             <p>
                 Remark:
-                <input type="text" name="remark">
+                <input type="text" name="remark" id="remarkSupplierUpdate">
             </p>
         </form>
     </div>

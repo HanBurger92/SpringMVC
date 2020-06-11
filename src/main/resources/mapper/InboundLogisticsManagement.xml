@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.springmvc.dao.InboundLogisticsManagementDao">
+
+    <resultMap id="InboundMap" type="Inbound">
+        <result property="inboundReceipt" column="inbound_receipt"/>
+        <result property="inboundDate" column="inbound_date"/>
+        <result property="supplier" column="supplier"/>
+        <result property="recorder" column="recorder"/>
+        <result property="reviewer" column="reviewer"/>
+        <result property="price" column="price"/>
+        <result property="remark" column="remark"/>
+    </resultMap>
+
+    <select id="selectInbound" parameterType="Map" resultMap="InboundMap">
+        SELECT * FROM aoxing_inbound
+        WHERE 1=1
+        <if test="receipt != null and receipt != ''">
+            AND inbound_receipt = #{receipt}
+        </if>
+        <if test="supplier != null and supplier != ''">
+            AND supplier = #{supplier}
+        </if>
+        <if test="startDate != null and endDate != null and startDate != '' and endDate != ''">
+            AND inbound_date BETWEEN #{startDate} AND #{endDate}
+        </if>
+    </select>
+
+    <insert id="insertInbound" parameterType="com.springmvc.entity.Inbound">
+        INSERT INTO aoxing_inbound(inbound_receipt, inbound_date, supplier, recorder, reviewer, price, remark)
+        VALUE (#{inboundReceipt}, #{inboundDate}, #{supplier}, #{recorder}, #{reviewer}, #{price}, #{remark})
+    </insert>
+
+    <delete id="deleteInbound" parameterType="String">
+        DELETE FROM
+        aoxing_inbound
+        WHERE
+        inbound_receipt = #{inboundReceipt}
+    </delete>
+
+    <update id="updateInbound" parameterType="com.springmvc.entity.Inbound">
+        UPDATE aoxing_inbound
+        SET
+        inbound_date = #{inboundDate}, supplier = #{supplier}, recorder = #{recorder}, reviewer = #{reviewer},
+        price = #{price}, remark = #{remark}
+        WHERE
+        inbound_receipt = #{inboundReceipt}
+    </update>
+</mapper>

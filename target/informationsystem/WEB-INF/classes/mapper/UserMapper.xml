@@ -15,4 +15,36 @@
     <select id="login" parameterType="com.springmvc.entity.User" resultMap="UserMap">
         SELECT * FROM aoxing_user WHERE user_name = #{userName} AND user_password = #{password}
     </select>
+
+    <select id="userSelect" parameterType="Map" resultMap="UserMap">
+        SELECT * FROM aoxing_user
+        WHERE 1=1
+        <if test="id != null and id != ''">
+            AND id = #{id}
+        </if>
+        <if test="userName != null and userName != ''">
+            AND user_name = #{userName}
+        </if>
+        <if test="role != null and role != ''">
+            And role = #{role}
+        </if>
+    </select>
+
+    <insert id="userInsert" useGeneratedKeys="true" keyProperty="id" parameterType="com.springmvc.entity.User">
+        INSERT INTO aoxing_user(user_name, user_password, role)
+        VALUE (#{userName}, #{password}, #{role})
+    </insert>
+
+    <delete id="userDelete" parameterType="Integer">
+        DELETE FROM aoxing_user
+        WHERE id=#{id}
+    </delete>
+
+    <update id="userUpdate" parameterType="com.springmvc.entity.User">
+        UPDATE aoxing_user
+        SET
+        user_name = #{userName}, user_password = #{password}, role = #{role}
+        WHERE
+        id = #{id}
+    </update>
 </mapper>

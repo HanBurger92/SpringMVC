@@ -6,14 +6,14 @@ $(function () {
         alert(msg);
     }
 
-    $('#inbound-dialog').dialog({
+    $('#outbound-dialog').dialog({
         autoOpen: false,
         height: 800,
         width: 400,
         modal: true,
         buttons: {
             "confirm": function () {
-                form=$('#inboundForm');
+                form=$('#outboundForm');
                 form.submit();
             },
             "Cancel": function () {
@@ -22,13 +22,13 @@ $(function () {
         }
     });
 
-    $("#inboundForm").validate({
+    $("#outboundForm").validate({
         rules: {
-            inboundReceipt: {
+            outboundReceipt: {
                 required: true,
                 maxlength: 20
             },
-            inboundDate: "required",
+            outboundDate: "required",
             supplier: {
                 required: true,
                 maxlength: 10
@@ -43,40 +43,40 @@ $(function () {
             },
             price: {
                 required: true,
-                max: 1000000
+                maxlength: 1000000
             },
             remark: {
                 required: true,
-                maxlength: 50
+                max: 50
             }
         }
     });
 
-    $('.updateInbound').click(function () {
-        var inboundReceipt = $(this).data("inboundReceipt");
-        var inboundDate = $(this).data("inboundDate");
+    $('.updateOutbound').click(function () {
+        var outboundReceipt = $(this).data("outboundReceipt");
+        var outboundDate = $(this).data("outboundDate");
         var supplier = $(this).data("supplier");
         var recorder = $(this).data("recorder");
         var reviewer = $(this).data("reviewer");
         var price = $(this).data("price");
         var remark = $(this).data("remark");
 
-        $('#inboundReceipt').val(inboundReceipt);
-        $('#inboundDate').val(inboundDate);
+        $('#outboundReceipt').val(outboundReceipt);
+        $('#outboundDate').val(outboundDate);
         $('#supplier').val(supplier);
         $('#recorder').val(recorder);
         $('#reviewer').val(reviewer);
         $('#price').val(price);
         $('#remark').val(remark);
-        $('#inboundReceipt').prop('readonly', true);
-        $('#inbound-update-dialog').dialog({
+        $('#outboundReceipt').prop('readonly', true);
+        $('#outbound-update-dialog').dialog({
             autoOpen: false,
             height: 800,
             width: 400,
             modal: true,
             buttons:{
                 "Confirm": function () {
-                    form = $('#inboundUpdateForm');
+                    form = $('#outboundUpdateForm');
                     form.submit();
                 },
                 "Cancel": function () {
@@ -84,16 +84,16 @@ $(function () {
                 }
             }
         });
-        $('#inbound-update-dialog').dialog('open');
+        $('#outbound-update-dialog').dialog('open');
     });
 
-    $('#inboundUpdateForm').validate({
+    $('#outboundUpdateForm').validate({
         rules: {
-            inboundReceipt: {
+            outboundReceipt: {
                 required: true,
                 maxlength: 20
             },
-            inboundDate: "required",
+            outboundDate: "required",
             supplier: {
                 required: true,
                 maxlength: 10
@@ -118,6 +118,7 @@ $(function () {
     });
 
     $('#create-data').click(function () {
-        $('#inbound-dialog').dialog('open');
-    })
+        $('#outbound-dialog').dialog('open');
+    });
+
 });

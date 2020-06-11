@@ -10,39 +10,78 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e97ef747-e3d0-47f7-ba09-7832841f6f86" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/springmvc/controller/inboundLogisticsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/inboundLogistics.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/springmvc/controller/InboundLogisticsManagementController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/springmvc/controller/OutboundLogisticsManagementController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/springmvc/controller/UserSettingController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/springmvc/entity/Inbound.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/springmvc/entity/Outbound.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/InboundLogisticsManagement.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/outboundLogisticsManagement.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/outboundLogistics.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/userSetting.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springmvc/controller/BasicDataManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springmvc/controller/BasicDataManagementController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springmvc/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springmvc/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springmvc/config/RootConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springmvc/config/RootConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/springmvc/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springmvc/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springmvc/dao/ComprehensiveStatementDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springmvc/dao/UserSettingDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springmvc/controller/inboundLogisticsController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/springmvc/dao/InboundLogisticsManagementDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springmvc/dao/InboundLogisticsManagementDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springmvc/service/ComprehensiveStatementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springmvc/service/UserSettingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springmvc/dao/OutboundLogisticsManagementDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springmvc/dao/OutboundLogisticsManagementDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springmvc/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springmvc/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springmvc/dao/UserSettingDao.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/springmvc/service/InboundLogisticsManagementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springmvc/service/InboundLogisticsManagementService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/BasicDataManagementMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/BasicDataManagementMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/BDMgmtInsert.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springmvc/service/OutboundLogisticsManagementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springmvc/service/OutboundLogisticsManagementService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springmvc/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springmvc/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springmvc/service/UserSettingService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/basicDataManagement.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/basicDataManagement.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/comprehensiveStatement.jsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/inboundLogisticsManagement.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/inboundLogisticsManagement.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/mainPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/mainPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/outboundLogisticsManagement.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/outboundLogisticsManagement.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userSetting.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userSetting.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/basicDataManagement.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/basic.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/mainPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/mainPage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/comprehensiveStatement.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/userSetting.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/basic.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/basic.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/js/basicDataManagement.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/basicDataManagement.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/inboundLogistics.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/inboundLogistics.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springmvc/config/RootConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springmvc/config/RootConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/springmvc/config/RootConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springmvc/config/RootConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/springmvc/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springmvc/config/WebConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/springmvc/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springmvc/config/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/springmvc/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springmvc/controller/HomeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/springmvc/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springmvc/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springmvc/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springmvc/controller/MainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springmvc/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springmvc/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springmvc/dao/ComprehensiveStatementDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springmvc/dao/ComprehensiveStatementDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springmvc/dao/InboundLogisticsManagementDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springmvc/dao/InboundLogisticsManagementDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springmvc/dao/InboundLogisticsManagementDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springmvc/dao/InboundLogisticsManagementDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springmvc/dao/OutboundLogisticsManagementDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springmvc/dao/OutboundLogisticsManagementDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springmvc/dao/OutboundLogisticsManagementDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springmvc/dao/OutboundLogisticsManagementDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springmvc/service/ComprehensiveStatementService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springmvc/service/ComprehensiveStatementService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springmvc/service/InboundLogisticsManagementService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springmvc/service/InboundLogisticsManagementService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springmvc/service/InboundLogisticsManagementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springmvc/service/InboundLogisticsManagementService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springmvc/service/OutboundLogisticsManagementService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springmvc/service/OutboundLogisticsManagementService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springmvc/service/OutboundLogisticsManagementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springmvc/service/OutboundLogisticsManagementService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/informationsystem/WEB-INF/classes/com/springmvc/config/RootConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/informationsystem/WEB-INF/classes/com/springmvc/config/RootConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/informationsystem/WEB-INF/classes/com/springmvc/config/RootConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/informationsystem/WEB-INF/classes/com/springmvc/config/RootConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/informationsystem/WEB-INF/classes/com/springmvc/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/informationsystem/WEB-INF/classes/com/springmvc/config/WebConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/informationsystem/WEB-INF/classes/com/springmvc/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/informationsystem/WEB-INF/classes/com/springmvc/config/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/informationsystem/WEB-INF/classes/com/springmvc/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/informationsystem/WEB-INF/classes/com/springmvc/controller/HomeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/informationsystem/WEB-INF/classes/com/springmvc/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/informationsystem/WEB-INF/classes/com/springmvc/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/informationsystem/WEB-INF/classes/com/springmvc/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/informationsystem/WEB-INF/classes/com/springmvc/controller/MainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/informationsystem/WEB-INF/classes/com/springmvc/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/informationsystem/WEB-INF/classes/com/springmvc/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/informationsystem/WEB-INF/classes/com/springmvc/dao/ComprehensiveStatementDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/informationsystem/WEB-INF/classes/com/springmvc/dao/ComprehensiveStatementDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/informationsystem/WEB-INF/classes/com/springmvc/dao/InboundLogisticsManagementDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/informationsystem/WEB-INF/classes/com/springmvc/dao/InboundLogisticsManagementDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/informationsystem/WEB-INF/classes/com/springmvc/dao/InboundLogisticsManagementDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/informationsystem/WEB-INF/classes/com/springmvc/dao/InboundLogisticsManagementDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/informationsystem/WEB-INF/classes/com/springmvc/dao/OutboundLogisticsManagementDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/informationsystem/WEB-INF/classes/com/springmvc/dao/OutboundLogisticsManagementDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/informationsystem/WEB-INF/classes/com/springmvc/dao/OutboundLogisticsManagementDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/informationsystem/WEB-INF/classes/com/springmvc/dao/OutboundLogisticsManagementDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/informationsystem/WEB-INF/classes/com/springmvc/service/ComprehensiveStatementService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/informationsystem/WEB-INF/classes/com/springmvc/service/ComprehensiveStatementService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/informationsystem/WEB-INF/classes/com/springmvc/service/InboundLogisticsManagementService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/informationsystem/WEB-INF/classes/com/springmvc/service/InboundLogisticsManagementService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/informationsystem/WEB-INF/classes/com/springmvc/service/InboundLogisticsManagementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/informationsystem/WEB-INF/classes/com/springmvc/service/InboundLogisticsManagementService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/informationsystem/WEB-INF/classes/com/springmvc/service/OutboundLogisticsManagementService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/informationsystem/WEB-INF/classes/com/springmvc/service/OutboundLogisticsManagementService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/informationsystem/WEB-INF/classes/com/springmvc/service/OutboundLogisticsManagementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/informationsystem/WEB-INF/classes/com/springmvc/service/OutboundLogisticsManagementService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/informationsystem/WEB-INF/views/basicDataManagement.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/informationsystem/WEB-INF/views/basicDataManagement.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/informationsystem/WEB-INF/views/comprehensiveStatement.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/informationsystem/WEB-INF/views/inboundLogisticsManagement.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/informationsystem/WEB-INF/views/inboundLogisticsManagement.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/informationsystem/WEB-INF/views/mainPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/informationsystem/WEB-INF/views/mainPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/informationsystem/WEB-INF/views/outboundLogisticsManagement.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/informationsystem/WEB-INF/views/outboundLogisticsManagement.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/informationsystem/WEB-INF/views/userSetting.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/informationsystem/WEB-INF/views/userSetting.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/informationsystem/css/basicDataManagement.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/informationsystem/images/comprehensiveStatement.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/informationsystem/js/basicDataManagement.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/informationsystem/js/basicDataManagement.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -84,21 +123,7 @@
         <item name="aoxing@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="aoxing: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="aoxing_consumer: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="aoxing@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="aoxing: schema" type="76f4a085:MysqlImplModel$Schema" />
         <item name="aoxing_product: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="aoxing@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="aoxing: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="aoxing_supplier: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
@@ -119,37 +144,31 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/basicDataManagement.jsp">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userSetting.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="41" column="44" lean-forward="true" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
+            <state relative-caret-position="45">
+              <caret line="26" column="3" lean-forward="true" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
+              <folding>
+                <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/inboundLogisticsManagement.jsp">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/userSetting.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="16" column="49" lean-forward="true" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/springmvc/dao/InboundLogisticsManagementDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" column="21" lean-forward="true" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+            <state relative-caret-position="399">
+              <caret line="60" column="18" lean-forward="true" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/springmvc/controller/BasicDataManagementController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/springmvc/controller/UserSettingController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="24" column="104" lean-forward="true" selection-start-line="24" selection-start-column="104" selection-end-line="24" selection-end-column="104" />
+            <state relative-caret-position="1045">
+              <caret line="55" column="28" selection-start-line="55" selection-start-column="28" selection-end-line="55" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -158,10 +177,59 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/springmvc/controller/inboundLogisticsController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/springmvc/dao/UserDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="209">
+              <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="57">
+              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/outboundLogisticsManagement.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="40" column="13" lean-forward="true" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/springmvc/entity/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="38">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/springmvc/service/UserService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="646">
+              <caret line="56" column="35" lean-forward="true" selection-start-line="56" selection-start-column="35" selection-end-line="56" selection-end-column="35" />
+              <folding>
+                <element signature="e#562#563#0" expanded="true" />
+                <element signature="e#608#609#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/springmvc/service/OutboundLogisticsManagementService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-323">
+              <caret line="31" column="60" lean-forward="true" selection-start-line="31" selection-start-column="60" selection-end-line="31" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -170,41 +238,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/springmvc/service/BasicDataManagementService.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/springmvc/controller/InboundLogisticsManagementController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="15" selection-start-line="15" selection-end-line="16" selection-end-column="58" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state>
+              <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/springmvc/service/InboundLogisticsManagementService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" column="64" selection-start-line="10" selection-start-column="64" selection-end-line="10" selection-end-column="64" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/basicDataManagement.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="171" column="52" lean-forward="true" selection-start-line="171" selection-start-column="52" selection-end-line="171" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/inboundLogistics.js">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -213,13 +252,15 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="spring-beans.schema" />
-        <option value="FxmlFile" />
         <option value="Interface" />
         <option value="CSS File" />
         <option value="Jsp File" />
         <option value="Tag Library Descriptor" />
-        <option value="JavaScript File" />
+        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="XSLT Stylesheet" />
+        <option value="jsf" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -235,6 +276,9 @@
       <find>ses</find>
       <find>request</find>
       <find>set</find>
+      <find>search</find>
+      <find>sess</find>
+      <find>outbound</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -243,57 +287,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/conprehensiveStatement.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/springmvc/mapper/BasicDataManagementMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/springmvc/config/WebIntializer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/springmvc/mybatis-config.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/springmvc/mapper/UserMapper.fxml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/springmvc/service/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/springmvc/controller/LoginController.java" />
-        <option value="$PROJECT_DIR$/target/informationsystem/WEB-INF/views/home.jsp" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/e09662c1-3ae7-4b00-8123-54a3dddc04e9/console.sql" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/19abd423-ecc8-4bbe-bb73-e854baf1fd18/console.sql" />
-        <option value="$PROJECT_DIR$/target/classes/com/springmvc/mapper/UserMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/springmvc/mapper/UserMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/springmvc/dao/UserDao.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/success.jsp" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/19abd423-ecc8-4bbe-bb73-e854baf1fd18/console_1.sql" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/19abd423-ecc8-4bbe-bb73-e854baf1fd18/console_2.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/com/springmvc/entity/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/springmvc/entity/Supplier.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/springmvc/entity/Product.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/springmvc/entity/Consumer.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/login.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/comprehensiveStatement.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/loginFail.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/outboundLogisticsManagement.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userSetting.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/BDMgmtInsert.jsp" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/target/informationsystem/css/basicDataManagement.css" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/BasicDataManagementMapper.tld" />
-        <option value="$PROJECT_DIR$/src/main/java/com/springmvc/controller/MainController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/src/main/java/com/springmvc/dao/BasicDataManagementDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/springmvc/service/BasicDataManagementService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/springmvc/config/RootConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/springmvc/config/WebConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/springmvc/controller/HomeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/springmvc/StringUtils.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/basicDataManagement.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/mainPage.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/basicDataManagement.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/springmvc/controller/BasicDataManagementController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/BasicDataManagementMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/basicDataManagement.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/mainPage.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/inboundLogistics.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/inboundLogisticsManagement.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/springmvc/service/InboundLogisticsManagementService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/springmvc/entity/Inbound.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/springmvc/dao/InboundLogisticsManagementDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/springmvc/controller/inboundLogisticsController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/inboundLogisticsManagement.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/InboundLogisticsManagement.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/springmvc/config/RootConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/springmvc/entity/Outbound.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/springmvc/dao/OutboundLogisticsManagementDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/springmvc/controller/OutBoundLogisticsManagementController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/springmvc/controller/InboundLogisticsManagementController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/outboundLogisticsManagement.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/InboundLogisticsManagement.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/springmvc/controller/OutboundLogisticsManagementController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/springmvc/service/OutboundLogisticsManagementService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/springmvc/service/InboundLogisticsManagementService.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/css/basic.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/basicDataManagement.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/inboundLogistics.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/outboundLogistics.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/springmvc/controller/MainController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/userSetting.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/loginCheck.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/outboundLogisticsManagement.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/mainPage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/inboundLogisticsManagement.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/basicDataManagement.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/springmvc/dao/UserDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/springmvc/entity/User.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/userSetting.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/springmvc/service/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/springmvc/controller/UserSettingController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userSetting.jsp" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" />
       </list>
     </option>
   </component>
@@ -338,7 +382,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -502,6 +545,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -739,7 +783,9 @@
       <workItem from="1591258411532" duration="8247000" />
       <workItem from="1591327711898" duration="13529000" />
       <workItem from="1591589775511" duration="13992000" />
-      <workItem from="1591674593457" duration="11509000" />
+      <workItem from="1591674593457" duration="11826000" />
+      <workItem from="1591760935039" duration="16021000" />
+      <workItem from="1591841448989" duration="22136000" />
     </task>
     <task id="LOCAL-00001" summary="update front-end">
       <created>1589882781375</created>
@@ -790,11 +836,25 @@
       <option name="project" value="LOCAL" />
       <updated>1591361566663</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="updated">
+      <created>1591698441067</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1591698441067</updated>
+    </task>
+    <task id="LOCAL-00009" summary="updated">
+      <created>1591698577758</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1591698577758</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="228859000" />
+    <option name="totallyTimeSpent" value="267333000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -809,7 +869,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49833333" visible="true" weight="0.27292112" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49833333" visible="true" weight="0.27292112" />
       <window_info id="Structure" order="1" sideWeight="0.50166667" side_tool="true" weight="0.25266525" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -819,8 +879,8 @@
       <window_info id="Web" order="7" sideWeight="0.50166667" side_tool="true" weight="0.25266525" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286334" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.4099783" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.4295011" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.318872" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.38937092" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -842,7 +902,7 @@
       <window_info anchor="right" id="Maven" order="5" weight="0.32995737" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Database" order="8" weight="0.28464818" />
+      <window_info anchor="right" id="Database" order="8" weight="0.24307036" />
       <window_info anchor="right" id="JSF" order="9" weight="0.32995737" />
       <window_info anchor="right" id="CDI" order="10" weight="0.32995737" />
       <window_info anchor="right" id="Bean Validation" order="11" weight="0.32995737" />
@@ -858,8 +918,8 @@
       <window_info id="Web" order="7" sideWeight="0.50166667" side_tool="true" weight="0.25266525" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286334" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.4099783" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.27114967" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.318872" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4295011" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -881,7 +941,7 @@
       <window_info anchor="right" id="Maven" order="5" weight="0.32995737" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Database" order="8" weight="0.28464818" />
+      <window_info anchor="right" id="Database" order="8" weight="0.24307036" />
       <window_info anchor="right" id="JSF" order="9" weight="0.32995737" />
       <window_info anchor="right" id="CDI" order="10" weight="0.32995737" />
       <window_info anchor="right" id="Bean Validation" order="11" weight="0.32995737" />
@@ -895,183 +955,10 @@
     <MESSAGE value="update basicDataManagement JSP CSS JS" />
     <MESSAGE value="update JSP" />
     <MESSAGE value="updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated" />
+    <MESSAGE value="basicDataManagement module Completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="basicDataManagement module Completed" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/target/classes/com/springmvc/controller/MainController.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-114">
-          <folding>
-            <element signature="e#0#1044#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://19abd423-ecc8-4bbe-bb73-e854baf1fd18/schema/aoxing/table/aoxing_supplier">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="0ab3660c-64bd-48eb-b74e-7aa09268240f">
-          <filtering />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/19abd423-ecc8-4bbe-bb73-e854baf1fd18/console_1.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/19abd423-ecc8-4bbe-bb73-e854baf1fd18/console_2.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/springmvc/entity/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/login.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/outboundLogisticsManagement.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userSetting.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="7" lean-forward="true" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/springmvc/service/OutboundLogisticsManagementService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/springmvc/service/UserSettingService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/BDMgmtInsert.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userSetting.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="101" column="29" lean-forward="true" selection-start-line="101" selection-start-column="29" selection-end-line="101" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/informationsystem/css/basicDataManagement.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="43" column="17" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://19abd423-ecc8-4bbe-bb73-e854baf1fd18/schema/aoxing/table/aoxing_product">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="22c60477-716c-4f0a-adcd-6c540e628f92">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/springmvc/dao/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/springmvc/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="35" lean-forward="true" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#325#326#0" expanded="true" />
-            <element signature="e#367#368#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/springmvc/entity/Consumer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="817">
-          <caret line="71" column="13" selection-start-line="71" selection-start-column="13" selection-end-line="71" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/springmvc/config/WebIntializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/springmvc/config/WebConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="606">
-          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/springmvc/config/RootConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="79" column="55" selection-start-line="79" selection-start-column="55" selection-end-line="79" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/informationsystem/js/basicDataManagement.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="101" column="39" lean-forward="true" selection-start-line="101" selection-start-column="39" selection-end-line="101" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://19abd423-ecc8-4bbe-bb73-e854baf1fd18/schema/aoxing/table/aoxing_consumer">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state projectRestartId="6467efc9-236f-4f77-8183-7e4e0afbde98">
@@ -1087,26 +974,6 @@
           <filtering>
             <filter text="" />
           </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/springmvc/controller/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#514#515#0" expanded="true" />
-            <element signature="e#558#559#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="44" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -1160,58 +1027,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/springmvc/StringUtils/AuthorizationCheck.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/springmvc/StringUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="26" lean-forward="true" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/springmvc/controller/HomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="39" column="14" lean-forward="true" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/springmvc/StringUtils/AuthorizationCheck.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/springmvc/StringUtils.java" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/css/mainPage.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="267">
           <caret line="53" column="23" lean-forward="true" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/springmvc/entity/Product.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-437">
-          <caret line="12" column="28" lean-forward="true" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/basic.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/mainPage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-227">
-          <caret line="15" column="6" lean-forward="true" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -1222,48 +1043,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/BasicDataManagementMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="122" column="13" lean-forward="true" selection-start-line="122" selection-start-column="13" selection-end-line="122" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/inboundLogistics.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/basicDataManagement.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="171" column="52" lean-forward="true" selection-start-line="171" selection-start-column="52" selection-end-line="171" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/inboundLogisticsManagement.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="49" lean-forward="true" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/basicDataManagement.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/springmvc/entity/Product.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
-          <caret line="41" column="44" lean-forward="true" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/springmvc/service/BasicDataManagementService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="15" selection-start-line="15" selection-end-line="16" selection-end-column="58" />
+          <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1272,8 +1055,62 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/springmvc/dao/BasicDataManagementDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
+        <state relative-caret-position="98">
           <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/springmvc/entity/Inbound.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+          <folding>
+            <element signature="e#326#327#0" expanded="true" />
+            <element signature="e#363#364#0" expanded="true" />
+            <element signature="e#423#424#0" expanded="true" />
+            <element signature="e#475#476#0" expanded="true" />
+            <element signature="e#511#512#0" expanded="true" />
+            <element signature="e#545#546#0" expanded="true" />
+            <element signature="e#597#598#0" expanded="true" />
+            <element signature="e#643#644#0" expanded="true" />
+            <element signature="e#678#679#0" expanded="true" />
+            <element signature="e#709#710#0" expanded="true" />
+            <element signature="e#757#758#0" expanded="true" />
+            <element signature="e#797#798#0" expanded="true" />
+            <element signature="e#832#833#0" expanded="true" />
+            <element signature="e#863#864#0" expanded="true" />
+            <element signature="e#911#912#0" expanded="true" />
+            <element signature="e#951#952#0" expanded="true" />
+            <element signature="e#986#987#0" expanded="true" />
+            <element signature="e#1017#1018#0" expanded="true" />
+            <element signature="e#1065#1066#0" expanded="true" />
+            <element signature="e#1105#1106#0" expanded="true" />
+            <element signature="e#1137#1138#0" expanded="true" />
+            <element signature="e#1165#1166#0" expanded="true" />
+            <element signature="e#1207#1208#0" expanded="true" />
+            <element signature="e#1241#1242#0" expanded="true" />
+            <element signature="e#1274#1275#0" expanded="true" />
+            <element signature="e#1303#1304#0" expanded="true" />
+            <element signature="e#1347#1348#0" expanded="true" />
+            <element signature="e#1383#1384#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="46" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/springmvc/config/RootConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="39" column="31" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1282,25 +1119,129 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/springmvc/dao/InboundLogisticsManagementDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="21" lean-forward="true" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/springmvc/service/InboundLogisticsManagementService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="64" selection-start-line="10" selection-start-column="64" selection-end-line="10" selection-end-column="64" />
+        <state relative-caret-position="266">
+          <caret line="14" column="40" lean-forward="true" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/springmvc/controller/inboundLogisticsController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/springmvc/entity/Outbound.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="380">
+          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+          <folding>
+            <element signature="e#326#327#0" expanded="true" />
+            <element signature="e#364#365#0" expanded="true" />
+            <element signature="e#426#427#0" expanded="true" />
+            <element signature="e#480#481#0" expanded="true" />
+            <element signature="e#517#518#0" expanded="true" />
+            <element signature="e#552#553#0" expanded="true" />
+            <element signature="e#606#607#0" expanded="true" />
+            <element signature="e#654#655#0" expanded="true" />
+            <element signature="e#689#690#0" expanded="true" />
+            <element signature="e#720#721#0" expanded="true" />
+            <element signature="e#768#769#0" expanded="true" />
+            <element signature="e#808#809#0" expanded="true" />
+            <element signature="e#843#844#0" expanded="true" />
+            <element signature="e#874#875#0" expanded="true" />
+            <element signature="e#922#923#0" expanded="true" />
+            <element signature="e#962#963#0" expanded="true" />
+            <element signature="e#997#998#0" expanded="true" />
+            <element signature="e#1028#1029#0" expanded="true" />
+            <element signature="e#1076#1077#0" expanded="true" />
+            <element signature="e#1116#1117#0" expanded="true" />
+            <element signature="e#1148#1149#0" expanded="true" />
+            <element signature="e#1176#1177#0" expanded="true" />
+            <element signature="e#1218#1219#0" expanded="true" />
+            <element signature="e#1252#1253#0" expanded="true" />
+            <element signature="e#1285#1286#0" expanded="true" />
+            <element signature="e#1314#1315#0" expanded="true" />
+            <element signature="e#1358#1359#0" expanded="true" />
+            <element signature="e#1394#1395#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/springmvc/dao/OutboundLogisticsManagementDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="43" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/LocalRepository/org/springframework/spring-web/5.2.5.RELEASE/spring-web-5.2.5.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="101" selection-start-line="101" selection-end-line="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="104" column="40" selection-start-line="104" selection-start-column="40" selection-end-line="104" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/springmvc/controller/OutboundLogisticsManagementController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/InboundLogisticsManagement.xml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/basic.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://19abd423-ecc8-4bbe-bb73-e854baf1fd18/schema/aoxing/table/aoxing_outbound">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="00f3a060-db5e-4de0-b48f-1cfcb917bb8f">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/images/userSetting.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/userSetting.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/springmvc/service/BasicDataManagementService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/springmvc/controller/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="46" column="49" lean-forward="true" selection-start-line="46" selection-start-column="49" selection-end-line="46" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1309,8 +1250,192 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/springmvc/controller/BasicDataManagementController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="24" column="104" lean-forward="true" selection-start-line="24" selection-start-column="104" selection-end-line="24" selection-end-column="104" />
+        <state relative-caret-position="179">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/loginCheck.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="2" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/mainPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="22" column="91" selection-start-line="22" selection-start-column="91" selection-end-line="22" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/basicDataManagement.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6954">
+          <caret line="366" column="13" lean-forward="true" selection-start-line="366" selection-start-column="13" selection-end-line="366" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/BasicDataManagementMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="51" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/springmvc/service/UserSettingService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="33" lean-forward="true" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/inboundLogisticsManagement.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="59" column="16" lean-forward="true" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/basicDataManagement.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="118" selection-start-line="11" selection-start-column="118" selection-end-line="11" selection-end-column="118" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/inboundLogistics.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="727">
+          <caret line="122" column="3" lean-forward="true" selection-start-line="122" selection-start-column="3" selection-end-line="122" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/springmvc/controller/HomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="43" column="40" lean-forward="true" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/springmvc/controller/InboundLogisticsManagementController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/springmvc/service/InboundLogisticsManagementService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="36" column="33" lean-forward="true" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/outboundLogisticsManagement.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="81" column="34" lean-forward="true" selection-start-line="81" selection-start-column="34" selection-end-line="81" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/outboundLogistics.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="70" column="8" selection-start-line="70" selection-start-column="8" selection-end-line="70" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/userSetting.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="60" column="18" lean-forward="true" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/springmvc/service/OutboundLogisticsManagementService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-323">
+          <caret line="31" column="60" lean-forward="true" selection-start-line="31" selection-start-column="60" selection-end-line="31" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/springmvc/dao/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/springmvc/entity/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/springmvc/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="56" column="35" lean-forward="true" selection-start-line="56" selection-start-column="35" selection-end-line="56" selection-end-column="35" />
+          <folding>
+            <element signature="e#562#563#0" expanded="true" />
+            <element signature="e#608#609#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userSetting.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="26" column="3" lean-forward="true" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
+          <folding>
+            <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/outboundLogisticsManagement.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="40" column="13" lean-forward="true" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/springmvc/controller/UserSettingController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1045">
+          <caret line="55" column="28" selection-start-line="55" selection-start-column="28" selection-end-line="55" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

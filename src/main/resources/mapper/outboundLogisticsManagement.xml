@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.springmvc.dao.OutboundLogisticsManagementDao">
+
+
+    <resultMap id="OutboundMap" type="Outbound">
+        <result property="outboundReceipt" column="outbound_receipt"/>
+        <result property="outboundDate" column="outbound_date"/>
+        <result property="supplier" column="supplier"/>
+        <result property="recorder" column="recorder"/>
+        <result property="reviewer" column="reviewer"/>
+        <result property="price" column="price"/>
+        <result property="remark" column="remark"/>
+    </resultMap>
+
+    <select id="selectOutbound" parameterType="Map" resultMap="OutboundMap">
+        SELECT * FROM aoxing_outbound
+        WHERE 1=1
+        <if test="receipt != null and receipt != ''">
+            AND outbound_receipt = #{receipt}
+        </if>
+        <if test="supplier != null and supplier != ''">
+            AND supplier = #{supplier}
+        </if>
+        <if test="startDate != null and endDate != null and startDate != '' and endDate != ''">
+            AND outbound_date BETWEEN #{startDate} AND #{endDate}
+        </if>
+    </select>
+
+    <insert id="insertOutbound" parameterType="com.springmvc.entity.Outbound">
+        INSERT INTO aoxing_outbound(outbound_receipt, outbound_date, supplier, recorder, reviewer, price, remark)
+        VALUE (#{outboundReceipt}, #{outboundDate}, #{supplier}, #{recorder}, #{reviewer}, #{price}, #{remark})
+    </insert>
+
+    <delete id="deleteOutbound" parameterType="String">
+        DELETE FROM
+        aoxing_outbound
+        WHERE
+        outbound_receipt = #{outboundReceipt}
+    </delete>
+
+    <update id="updateOutbound" parameterType="com.springmvc.entity.Outbound">
+        UPDATE aoxing_outbound
+        SET
+        outbound_date = #{outboundDate}, supplier = #{supplier}, recorder = #{recorder}, reviewer = #{reviewer},
+        price = #{price}, remark = #{remark}
+        WHERE
+        outbound_receipt = #{outboundReceipt}
+    </update>
+</mapper>

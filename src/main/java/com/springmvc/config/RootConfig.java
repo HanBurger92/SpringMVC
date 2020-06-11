@@ -36,7 +36,7 @@ public class RootConfig implements TransactionManagementConfigurer {
 
         BasicDataSource ds = new BasicDataSource();
         ds.setDriverClassName("com.mysql.cj.jdbc.Driver"); // MySQL 8.0 need new driverClass instead of the old one
-        ds.setUrl("jdbc:mysql://localhost:3306/aoxing?serverTimezone=GMT"); // TimeZone is to prevent BUG of the 8.0 MySQL
+        ds.setUrl("jdbc:mysql://localhost:3306/aoxing?serverTimezone=Asia/Shanghai"); // TimeZone is to prevent BUG of the 8.0 MySQL
         ds.setUsername("root");
         ds.setPassword("duoduo9922");
         return ds;
