@@ -19,7 +19,7 @@ public class UserSettingController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping(value = "/userSelect", method = RequestMethod.POST)
+    @RequestMapping(value = "/selectUser", method = RequestMethod.POST)
     public ModelAndView userSelect(@RequestParam Map<String, Object> params){
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("userList", userService.selectUser(params));
@@ -27,7 +27,7 @@ public class UserSettingController {
         return modelAndView;
     }
 
-    @RequestMapping(value = "/userInsert", method = RequestMethod.POST)
+    @RequestMapping(value = "/insertUser", method = RequestMethod.POST)
     public ModelAndView userInsert(HttpServletRequest request, @RequestParam Map<String, Object> params){
         ModelAndView modelAndView = new ModelAndView();
         User user = new User();
@@ -40,7 +40,7 @@ public class UserSettingController {
         return modelAndView;
     }
 
-    @RequestMapping(value = "/userDelete", method = RequestMethod.GET)
+    @RequestMapping(value = "/deleteUser", method = RequestMethod.GET)
     public ModelAndView userDelete(HttpServletRequest request, Integer id){
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("msg", userService.deleteUser(request, id));
@@ -48,7 +48,7 @@ public class UserSettingController {
         return modelAndView;
     }
 
-    @RequestMapping(value = "/userUpdate", method = RequestMethod.POST)
+    @RequestMapping(value = "/updateUser", method = RequestMethod.POST)
     public ModelAndView userUpdate (HttpServletRequest request, User user){
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("msg", userService.updateUser(request, user));

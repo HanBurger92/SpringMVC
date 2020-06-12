@@ -110,20 +110,20 @@
 
             <c:forEach items="${requestScope.userList}" var="userList">
                 <tr>
-                    <td>${userList.userID}</td>
-                    <td>${userList.username}</td>
+                    <td>${userList.id}</td>
+                    <td>${userList.userName}</td>
                     <td>${userList.password}</td>
                     <td>${userList.role}</td>
                     <td>
-                        <a href="${pageContext.request.contextPath}/mainPage/userSetting/deleteUser?userID=${userList.userID}">
+                        <a href="${pageContext.request.contextPath}/mainPage/userSetting/deleteUser?userID=${userList.id}">
                             <button class="deleteButton" type="button">
                                 DELETE
                             </button>
                         </a>
                         |
                         <button class="updateUser" type="button"
-                                data-id="${userList.userID}"
-                                data-username="${userList.username}"
+                                data-id="${userList.id}"
+                                data-username="${userList.userName}"
                                 data-password="${userList.password}"
                                 data-role="${userList.role}">EDIT</button>
                     </td>
